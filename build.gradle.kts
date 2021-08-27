@@ -28,8 +28,12 @@ application {
 }
 
 dependencies {
-  implementation(platform("io.vertx:vertx-stack-depchain:$vertxVersion"))
-  implementation("io.vertx:vertx-web")
+  implementation(platform("io.vertx:vertx-core:$vertxVersion"))
+  implementation("io.vertx:vertx-web:$vertxVersion")
+  implementation("io.vertx:vertx-web-client:$vertxVersion")
+  implementation("io.vertx:vertx-rx-java2")
+  implementation( "com.github.ben-manes.caffeine:caffeine:3.0.3")
+
   testImplementation("io.vertx:vertx-junit5")
   testImplementation("org.junit.jupiter:junit-jupiter:$junitJupiterVersion")
 }
